@@ -4,26 +4,6 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <robot name="quad" xmlns:xacro="http://ros.org/wiki/xacro">
-  <!-- Properties -->
-  <!-- "propeller" -->
-  <!-- [kg] -->
-  <!-- [m] -->
-  <!-- [m] -->
-  <!-- [kg] -->
-  <!-- [m] -->
-  <!-- [m] -->
-  <!-- [m] -->
-  <!-- [kg.m/s^2] -->
-  <!-- [m] -->
-  <!-- [s] -->
-  <!-- [s] -->
-  <!-- [rad/s] -->
-  <!-- Property Blocks -->
-  <!-- inertia of a single rotor, assuming it is a cuboid. Height=3mm, width=15mm -->
-  <!-- Included URDF Files -->
-  <!-- Main multirotor link -->
-  <!-- Rotor joint and link -->
-  <!-- Instantiate multirotor_base_macro once -->
   <link name="base_link"/>
   <joint name="base_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -64,7 +44,6 @@
   <gazebo reference="base_link">
     <material>Gazebo/DarkGrey</material>
   </gazebo>
-  <!-- Instantiate rotors -->
   <joint name="rotor_0_joint" type="continuous">
     <origin rpy="0 0 0" xyz="0.17 0 0.01"/>
     <axis xyz="0 0 1"/>
@@ -286,3 +265,4 @@
     <material>Gazebo/Grey</material>
   </gazebo>
 </robot>
+
